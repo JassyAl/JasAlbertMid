@@ -22,19 +22,31 @@
     if($num > 0) {
         $quotes_arr = array();
 
-        while($row = $result->fetch(PDO::FETCH_ASSOC)){
+        // while($row = $result->fetch(PDO::FETCH_ASSOC)){
+        //     extract($row);
+
+        //     $quote_item = array(
+        //         'id' => $id,
+        //         'quote' => $quote,
+        //         'author_id' => $author_id,
+        //         'category_id' => $category_id
+        //     );
+
+        //     // Push to "data"
+        //     array_push($quotes_arr, $quote_item);
+        // } 
+        
+
+        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
-
-            $quote_item = array(
-                'id' => $id,
-                'quote' => $quote,
-                'author_id' => $author_id,
-                'category_id' => $category_id
-            );
-
+  
             // Push to "data"
-            array_push($quotes_arr, $quote_item);
-        } 
+            array_push($quotes_arr, ['id' => $id,
+            'quote' => $quote,
+            'author_id' => $author_id,
+            'category_id' => $category_id]);
+          }
+
 
         // Convert to JSON & output
         echo json_encode($quotes_arr);

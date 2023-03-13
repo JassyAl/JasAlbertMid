@@ -24,18 +24,12 @@
     if($num > 0){
         // Author array
         $author_arr = array();
-
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
-
-            $author_item = array(
-                'id' => $id,
-                'author' => $author
-            );
-
-            // Push to 'data'
-            array_push($author_arr, $author_item);
-        }
+  
+            // Push to "data"
+            array_push($author_arr, ['id'=>$id, 'author' => $author]);
+          }
 
         // Turn to JSON & output
         echo json_encode($author_arr);
