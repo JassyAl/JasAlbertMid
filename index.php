@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php
-    echo "Jasmine Albert";
-    ?>
+    <h1>Jasmine Albert</h1>
 </body>
 </html>
