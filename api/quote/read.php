@@ -21,7 +21,7 @@
     // Check for quotes
     if($num > 0) {
         $quotes_arr = array();
-        $quotes_arr['data'] = array();
+        $quotes_arr = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)){
             extract($row);
@@ -34,7 +34,7 @@
             );
 
             // Push to "data"
-            array_push($quotes_arr['data'], $quote_item);
+            array_push($quotes_arr, $quote_item);
         } 
 
         // Convert to JSON & output
