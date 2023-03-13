@@ -21,7 +21,6 @@
     // Check for quotes
     if($num > 0) {
         $quotes_arr = array();
-        $quotes_arr = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)){
             extract($row);
