@@ -41,8 +41,7 @@
             // Create query
             $query = 'SELECT
                 id,
-                author
-                
+                author   
             FROM
                 ' . $this->table . '
             WHERE
@@ -57,11 +56,18 @@
 
             // Execute query
             $stmt->execute();
-
+        // Check if row was found
+    if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
             // Set properties to what is returned
             $this->author = $row['author'];
+                // Return true
+                return true;
+            } else {
+                // Return false
+                return false;
+            }
         }
 
         public function create(){
