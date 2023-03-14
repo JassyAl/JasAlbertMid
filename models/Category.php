@@ -59,10 +59,13 @@
         $stmt->execute();
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
+        if($row) {
         // Set properties to what is returned
         $this->category = $row['category'];
-    }
+    } 
+}
+
+    
 
         public function create(){
             // Create query

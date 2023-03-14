@@ -34,7 +34,7 @@
           }
 
         // Turn to JSON & output
-        echo json_encode(array('authors' => $author_arr));
+        echo json_encode(($author_arr));
 
         // echo json_encode($author_arr);
     } else {

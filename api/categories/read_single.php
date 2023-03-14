@@ -24,11 +24,12 @@ $cat->read_single();
 if ($cat->category) {
     // Create array
     $category_arr = array(
-        'id' => $cat->id,
+        'id' => (int)$cat->id,
         'category' => $cat->category
     );
+    echo json_encode($category_arr);
     // Make JSON
-    print_r(json_encode($category_arr)); //prints an array but wraps it
+    // print_r(json_encode($category_arr)); //prints an array but wraps it
     } else {
         // No Categories
         echo json_encode(

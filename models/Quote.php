@@ -64,12 +64,14 @@
 
           $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+          if($row) {
           // Set properties to what is returned
           $this->id = $row['id'];
           $this->quote = $row['quote'];
           $this->author_id = $row['author_id'];
           $this->category_id = $row['category_id'];
         }
+    }
 
 
          // Create Quote

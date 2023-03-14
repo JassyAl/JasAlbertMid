@@ -25,7 +25,7 @@ if (!$auth->read_single()) {
 
 // Create array
 $author_arr = array(
-    'id' => $auth->id,
+    'id' => (int)$auth->id,
     'author' => $auth->author
 );
 
