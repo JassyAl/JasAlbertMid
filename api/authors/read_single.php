@@ -20,7 +20,7 @@ $auth->id = isset($_GET['id']) ? $_GET['id'] : die(json_encode(array('message' =
 // Get author
 if (!$auth->read_single()) {
     // No Authors
-    die(json_encode(array('message' => 'Author not found')));
+    die(json_encode(array('message' => 'author_id Not Found')));
 }
 
 // Create array
