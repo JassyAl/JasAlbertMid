@@ -65,7 +65,6 @@
     } 
 }
 
-    
 
         public function create(){
             // Create query
